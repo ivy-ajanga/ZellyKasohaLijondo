@@ -1,0 +1,58 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memorial Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class = "nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/obituary">Obituary</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/zelly_foundation">Zelly Foundation</a></li>
+                <!-- <li><a href="/buy_flowers">Buy Flowers</a></li> -->
+                <a class ="cta" href = "https://www.paypal.com/us/fundraiser/hub" target="_blank"> <button> Donate </button></a>
+            </ul>
+        </nav>
+    </header>
+
+    <h1> Zelly Kasoha Lijondo </h1>
+    <fieldset>
+        <legend>Woman of Power</legend>
+        <h2>Heart of Gold</h2>
+           <img src="/static/images/mumdata.JPG" alt="Mother" width="500" height="600">
+          
+        <form method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" required>
+    
+            <label for="relation">Relation to Deceased:</label>
+            <input type="text" name="relation" required>
+    
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" required>
+    
+            <label for="tribute">Tribute:</label>
+            <textarea name="tribute" required></textarea>
+    
+            <label for="condolence">Condolence:</label>
+            <textarea name="condolence" required></textarea>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
+    
+    <footer class="footer">
+        <p>© [2023] [Zelly Kasoha Lijondo]. All rights reserved.</p>
+    </footer>
+  
+    
+</body>
+</html>
