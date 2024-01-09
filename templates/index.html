@@ -1,21 +1,87 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
+    <style>
+        /* Apply styles to create a visually appealing form */
+        form {
+            max-width: 400px;
+            /* Adjust the maximum width as needed */
+            margin: auto;
+            background-color: #e5f4e2;
+            /* Green background color */
+            padding: 20px;
+            border-radius: 15px;
+            /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Add a subtle box shadow */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            /* Text color */
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            /* Border color */
+            border-radius: 5px;
+            /* Rounded corners */
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            /* Green submit button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            /* Rounded corners for the button */
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            /* Darker green on hover */
+        }
+
+        .container {
+            display: flex;
+            /* Use flex display to align image and form horizontally */
+            justify-content: center;
+            /* Center the flex items horizontally */
+            align-items: center;
+            /* Center the flex items vertically */
+        }
+
+        .container img {
+            margin-right: 20px;
+            /* Add some margin to separate the image and the form */
+        }
+    </style>
     <title>Memorial Web App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <header>
         <nav>
-            <ul class = "nav_links">
+            <ul class="nav_links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/obituary">Obituary</a></li>
                 <li><a href="/service">Service</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/zelly_foundation">Zelly Foundation</a></li>
-                <!-- <li><a href="/buy_flowers">Buy Flowers</a></li> -->
-                <a class ="cta" href = "https://www.paypal.com/us/fundraiser/hub" target="_blank"> <button> Donate </button></a>
+                <!-- <li><a href="/buy_flowers">Buy Flowers</a></li> 
+                <a class="cta" href="https://www.paypal.com/us/fundraiser/hub" target="_blank"> <button> Donate </button></a> -->
             </ul>
         </nav>
     </header>
@@ -23,36 +89,36 @@
     <h1> Zelly Kasoha Lijondo </h1>
     <fieldset>
         <legend>Woman of Power</legend>
-        <h2>Heart of Gold</h2>
-           <img src="/static/images/mumdata.JPG" alt="Mother" width="500" height="600">
-          
-        <form method="post" enctype="multipart/form-data">
-            <label for="name">Name:</label>
-            <input type="text" name="name" required>
-    
-            <label for="phone">Phone:</label>
-            <input type="tel" name="phone" required>
-    
-            <label for="relation">Relation to Deceased:</label>
-            <input type="text" name="relation" required>
-    
-            <label for="image">Upload Image:</label>
-            <input type="file" name="image" required>
-    
-            <label for="tribute">Tribute:</label>
-            <textarea name="tribute" required></textarea>
-    
-            <label for="condolence">Condolence:</label>
-            <textarea name="condolence" required></textarea>
-    
-            <input type="submit" value="Submit">
-        </form>
+        <div class="container">
+            <img src="/static/images/mumIndex.JPG" alt="Mother" width="500" height="600">
+            <form method="post" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" required>
+
+                <label for="relation">Relation to Deceased:</label>
+                <input type="text" name="relation" required>
+
+                <label for="image">Upload Image:</label>
+                <input type="file" name="image" required>
+
+                <label for="tribute">Tribute:</label>
+                <textarea name="tribute" required></textarea>
+
+                <label for="condolence">Condolence:</label>
+                <textarea name="condolence" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </fieldset>
-    
+
     <footer class="footer">
-        <p>© [2023] [Zelly Kasoha Lijondo]. All rights reserved.</p>
+        <p>© [2024] [Zelly Kasoha Lijondo]. All rights reserved.</p>
     </footer>
-  
-    
+
 </body>
+
 </html>
